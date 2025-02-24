@@ -21,7 +21,7 @@ Basic usage:
 
 ```hcl
 module "nginx" {
-source = "./modules/nginx"
+source = "github.com/lpi-code/IMT-Practical_Terraform"
 docker_image_name = "nginx:latest"
 docker_container_count = 2
 docker_expose_port_start = 8000
@@ -33,7 +33,7 @@ Advanced usage with all parameters:
 
 ```hcl
 module "nginx" {
-source = "./modules/nginx"
+source = "github.com/lpi-code/IMT-Practical_Terraform"
 docker_image_name = "nginx:1.24"
 docker_container_count = 3
 docker_expose_port_start = 8000
@@ -65,7 +65,7 @@ docker_privileged = false
 ### Single Container
 ```hcl
 module "nginx" {
-source = "./modules/nginx"
+source = "github.com/lpi-code/IMT-Practical_Terraform"
 docker_image_name = "nginx:latest"
 docker_container_count = 1
 docker_expose_port_start = 8080
@@ -75,7 +75,7 @@ docker_expose_port_start = 8080
 
 ```hcl
 module "nginx_cluster" {
-source = "./modules/nginx"
+source = "github.com/lpi-code/IMT-Practical_Terraform"
 docker_image_name = "nginx:latest"
 docker_container_count = 3
 docker_expose_port_start = 8000

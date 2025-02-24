@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0"
-    }
-  }
-}
-
 resource "docker_image" "nginx" {
   name         = var.docker_image_name
   keep_locally = false

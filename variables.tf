@@ -26,7 +26,6 @@ variable "docker_privileged" {
 
 variable "docker_container_count" {
     type = number
-    default = 3
     description = "Number of container to create"
     validation {
         condition = var.docker_container_count > 0

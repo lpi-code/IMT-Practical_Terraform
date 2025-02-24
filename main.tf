@@ -20,3 +20,9 @@ resource "docker_container" "nginx" {
   # Ensure container restarts if config changes
   restart = "unless-stopped"
 }
+
+# Add the nginx image resource if not already present
+resource "docker_image" "nginx" {
+  name = var.docker_image
+  keep_locally = true
+}

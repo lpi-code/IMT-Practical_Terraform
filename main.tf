@@ -1,3 +1,8 @@
+resource "local_file" "nginx-conf" {
+  filename = abspath("${path.module}/nginx.conf")
+  content = file(abspath("${path.module}/nginx.conf"))
+}
+
 resource "docker_container" "nginx" {
   count = var.docker_container_count
   image = docker_image.nginx.image_id
@@ -7,7 +12,7 @@ resource "docker_container" "nginx" {
   
   # Mount the nginx configuration
   volumes {
-    host_path      = "${path.module}/nginx.conf"
+    host_path      = abspath("${path.module}/nginx.conf")
     container_path = "/etc/nginx/conf.d/default.conf"
     read_only      = true
   }

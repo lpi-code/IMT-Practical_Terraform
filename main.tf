@@ -23,6 +23,6 @@ resource "docker_container" "nginx" {
 
 # Add the nginx image resource if not already present
 resource "docker_image" "nginx" {
-  name = var.docker_image
+  name = var.docker_image_name
   keep_locally = true
 }

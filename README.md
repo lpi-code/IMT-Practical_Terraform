@@ -70,6 +70,7 @@ docker_image_name = "nginx:latest"
 docker_container_count = 1
 docker_expose_port_start = 8080
 }
+```
 
 ### Multiple Containers with Custom Memory
 
